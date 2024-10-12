@@ -12,7 +12,9 @@ app.use(cors(corsOption));
 app.use(express.json());
 const userRouter = require("./routes/test.js");
 
-
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
 app.use("/api/test", userRouter);
 
 
